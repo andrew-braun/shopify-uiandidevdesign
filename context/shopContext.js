@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react"
-import { client } from "../utils/shopifyStore"
+import { client } from "utils/shopify/shopify-store"
 const ShopContext = React.createContext()
 
-export default function ShopProvider({}) {
+export default function ShopProvider({ children }) {
 	const [products, setProducts] = useState()
 	const [product, setProduct] = useState()
 	const [checkout, setCheckout] = useState()
